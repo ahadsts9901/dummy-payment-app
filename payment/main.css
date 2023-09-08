@@ -1,0 +1,44 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    max-width: 375px;
+    box-shadow: 0 0 16px #212121;
+}
+
+.name {
+    width: 8em;
+    text-align: right;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.name::-moz-scrollbar {
+    display: none;
+}
+
+.name::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+}
+
+@media only screen and (max-width:425px) {
+    .header {
+        font-size: 0.8em;
+    }
+}

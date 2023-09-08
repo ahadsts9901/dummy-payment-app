@@ -5,19 +5,25 @@
     /* font-family: "Space Mono", monospace; */
     font-family: "Josefin Sans", sans-serif;
     /* font-weight: normal!important; */
-    font-weight: bold!important;
-    outline: none!important;
-    box-sizing: border-box!important;
-    text-decoration: none!important;
-    font-style: normal!important;
+    font-weight: bold !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    font-style: normal !important;
 }
 
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0em;
+}
 
 /* body */
 
 body {
-    background-color: #ced9df!important;
-    color: #fff!important;
+    background-color: #ced9df !important;
+    color: #fff !important;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -27,8 +33,10 @@ body {
     row-gap: 2em;
     width: 100vw;
     height: 100vh;
-    padding: 2em 1em!important;
-    margin: 0em!important;
+    padding: 2em 1em !important;
+    margin: 0em !important;
+    max-width: 375px;
+    /* box-shadow: 0 0 16px #212121; */
 }
 
 p,
@@ -40,7 +48,7 @@ h5,
 h6,
 i,
 a {
-    margin: 0px!important;
+    margin: 0px !important;
 }
 
 
@@ -57,7 +65,7 @@ a {
 .dropdown-menu.show {
     background-color: #1f2a40;
     color: #2e46b0;
-    border: 1px solid #2e46b0!important;
+    border: 1px solid #2e46b0 !important;
 }
 
 .drop-down-options {
@@ -67,20 +75,20 @@ a {
 .list {
     width: 8em;
     display: inline-block;
-    margin-left: 1em!important;
+    margin-left: 1em !important;
 }
 
 a,
 .list>a {
     color: #b6d1fd;
-    margin: 0.5em 0.3em!important;
+    margin: 0.5em 0.3em !important;
 }
 
 
 /* icon */
 
 .icon {
-    margin-right: 0.5em!important;
+    margin-right: 0.5em !important;
 }
 
 
@@ -89,7 +97,7 @@ a,
 .r {
     display: flex;
     flex-direction: row;
-    padding: 0em!important;
+    padding: 0em !important;
     gap: 1em;
     width: 100%;
     height: fit-content;
@@ -130,7 +138,7 @@ a,
 .c {
     display: flex;
     flex-direction: column;
-    padding: 0em!important;
+    padding: 0em !important;
     gap: 1em;
     width: 100%;
     height: fit-content;
@@ -139,7 +147,7 @@ a,
 .cr {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0.5em!important;
+    padding: 0.5em !important;
     gap: 1em;
     width: 100%;
     height: fit-content;
@@ -186,13 +194,15 @@ a,
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
-    padding: 0.5em!important;
+    padding: 0.5em !important;
     border: none;
     width: 100%;
     /* margin-top: 1em; */
 }
 
-.button:focus, .button:hover, .button:active{
+.button:focus,
+.button:hover,
+.button:active {
     box-shadow: 0 0 8px #212121;
     background-color: #313131;
 }
@@ -202,7 +212,7 @@ a,
 .center {
     width: 100%;
     text-align: center;
-    margin: 0px!important;
+    margin: 0px !important;
 }
 
 .left {
@@ -225,11 +235,13 @@ a,
     background-color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 1em 0.5em!important;
+    padding: 1em 0.5em !important;
     border: 1px solid #2e46b0;
 }
 
-.input:focus, .input:hover, .input:active{
+.input:focus,
+.input:hover,
+.input:active {
     box-shadow: 0 0 8px #212121;
 }
 
@@ -287,7 +299,7 @@ a,
 }
 
 details[open] summary {
-    margin: none!important;
+    margin: none !important;
 }
 
 details summary {
@@ -310,7 +322,7 @@ details summary {
 }
 
 div:where(.swal2-container) div:where(.swal2-loader) {
-    border-color: #2e46b0 #fff!important;
+    border-color: #2e46b0 #fff !important;
 }
 
 
@@ -320,13 +332,13 @@ div:where(.swal2-container) div:where(.swal2-loader) {
     background-color: #fff;
     width: fit-content;
     height: fit-content;
-    padding: 1.5em!important;
+    padding: 1.5em !important;
     border-radius: 10px;
     color: #2e46b0;
     box-shadow: 0 0 16px #212121;
 }
 
-.login-signup a{
+.login-signup a {
     color: #2e46b0;
     font-size: 0.8em;
 }
@@ -348,11 +360,16 @@ div:where(.swal2-container) div:where(.swal2-loader) {
     text-align: center;
 }
 
-h1.center{
+h1.center {
     font-size: 1.5em;
     color: #2e46b0;
 }
 
-h2.center{
+h2.center {
     color: #212121;
+}
+
+p.center.name{
+    color: #212121;
+    line-height: 2em;
 }
