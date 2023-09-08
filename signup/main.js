@@ -39,6 +39,7 @@ function signup(event) {
     let confirmPassword = document.getElementById("password-signup-repeat").value;
     let photoU = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
     let message = document.querySelector(".validationMessage");
+    let balance = 100
 
     if (!email.endsWith("@gmail.com")) {
         message.innerText = `Invalid email address`;
@@ -88,6 +89,7 @@ function signup(event) {
                     lastName: lastName,
                     email: email,
                     photo: photoU,
+                    balance: balance,
                 })
                 .then((docRef) => {
                     console.log("signed added")

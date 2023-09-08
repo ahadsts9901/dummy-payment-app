@@ -6,7 +6,7 @@
     </meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </meta>
-    <title>Auth</title>
+    <title>Payment App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     </meta>
     <!-- icons cdn -->
@@ -46,7 +46,7 @@
                 <p>100</p>
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
-                <button class="text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Logout</button>
+                <button class="text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]" onclick="logout()">Logout</button>
             </div>
         </div>
 
@@ -56,7 +56,17 @@
                 <p class="text-[#2e46b0] w-[100%] text-[left]">Increase Wallet :</p>
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
-                <button class="text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Increase</button>
+                <button class="increase text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Increase</button>
+            </div>
+        </div>
+
+        <div
+            class="element hidden flex justify-between items-center gap-[1em] bg-[#fff] text-[#212121] p-[1em] w-[100%] rounded-[10px]">
+            <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
+                <p class="w-[100%] text-[left] text-[1.5em] text-[#212121]" id="currentAmount"></p>
+            </div>
+            <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
+                <button class="increase text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Add To Wallet</button>
             </div>
         </div>
 
@@ -66,7 +76,8 @@
                 <p class="text-[#212121] w-[100%] text-[2em] text-center bi bi-bag-fill"> Shopping</p>
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em] w-[100%]">
-                <input type="number" placeholder="Enter Amount..." class="text-[0.8em] bg-[#eee] w-[100%] text-[1.5em] text-[#212121] p-[0.5em_1em] rounded-[5px]" />
+                <input type="number" placeholder="Enter Amount..."
+                    class="text-[0.8em] bg-[#eee] w-[100%] text-[1.5em] text-[#212121] p-[0.5em_1em] rounded-[5px]" />
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
                 <button class="text-[1em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Shop</button>
@@ -83,7 +94,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js "></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <!-- javascript -->
-    <!-- <script src="./posts/main.js"></script> -->
+    <script src="./payment/main.js"></script>
 </body>
 
 </html>
