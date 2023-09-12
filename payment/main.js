@@ -197,6 +197,16 @@ document.querySelector(".increase").addEventListener("click", () => {
     document.querySelector("#currentAmount").innerText = increaseBal
 })
 
+document.querySelector(".decrease").addEventListener("click", () => {
+    increaseBal--
+    if (increaseBal > 0) {
+        document.querySelector(".element").classList.remove("hidden")
+    } else {
+        document.querySelector(".element").classList.add("hidden")
+    }
+    document.querySelector("#currentAmount").innerText = increaseBal
+})
+
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // document.getElementById("createName").innerText = user.email.slice(0, -10);
@@ -206,6 +216,30 @@ firebase.auth().onAuthStateChanged(function (user) {
         //console.log("not signed in");
     }
 });
+
+document.querySelector(".addToWallet").addEventListener("click", () => {
+    // console.log("Add")
+    let newBalance = document.querySelector("#currentAmount").innerText
+    let user = firebase.auth().currentUser.email
+    // console.log(user)
+
+    db.collection("users")
+        .get()
+        .then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                var data = doc.data();
+                if (data.email === user) {
+                    console.log("1")
+                    let balance = Number(data.balance) + Number(newBalance)
+                    console.log(balance)
+                }
+            })
+        }
+        ).catch((error) => {
+            console.error("Error updating document: ", error);
+        });
+
+})
 
 function logout() {
     firebase
