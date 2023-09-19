@@ -369,7 +369,22 @@ h2.center {
     color: #212121;
 }
 
-p.center.name{
+p.center.name {
     color: #212121;
     line-height: 2em;
+}
+
+.swal2-confirm:focus,
+.swal2-deny:focus,
+.swal2-cancel:focus,
+.swal2-input:focus {
+    box-shadow: 0 0 4px #212121 !important;
+}
+
+.swal2-input {
+    border: 0px solid #212121 !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-loader) {
+    border-color: #212121 #fff;
 }

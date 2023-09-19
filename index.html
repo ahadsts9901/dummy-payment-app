@@ -30,10 +30,10 @@
     <div
         class="header w-[100%] flex justify-between items-center bg-[#2e46b0] p-[1em] w-[100%] h-[fit-content] text-[#fff]">
         <h3 class="text-[1.3em] w-[15em]">Payment App</h3>
-        <div class="flex justify-end items-center w-[100%] gap-[1em]">
-            <p id="name" class="name"></p>
+        <div class="profile flex justify-end items-center w-[100%] gap-[1em]" onclick="window.location.href = './payment/profile.html'">
+            <p id="name" class="name w-[100%]"></p>
             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                class="w-[2em] h-[2em] rounded-[100%] object-cover">
+                class="image w-[2em] h-[2em] rounded-[100%] object-cover">
         </div>
     </div>
 
@@ -43,10 +43,11 @@
             class="flex justify-between items-center gap-[1em] bg-[#fff] text-[#212121] p-[1em] w-[100%] rounded-[10px]">
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
                 <p class="text-[#2e46b0]">Balance :</p>
-                <p>100</p>
+                <p class="liveBalance"></p>
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
-                <button class="text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]" onclick="logout()">Logout</button>
+                <button class="text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]"
+                    onclick="logout()">Logout</button>
             </div>
         </div>
 
@@ -56,7 +57,8 @@
                 <p class="text-[#2e46b0] w-[100%] text-[left]">Increase Wallet :</p>
             </div>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
-                <button class="increase text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Increase</button>
+                <button
+                    class="increase text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Increase</button>
             </div>
         </div>
 
@@ -66,16 +68,20 @@
                 <p class="w-[100%] text-[left] text-[1.5em] text-[#212121]" id="currentAmount"></p>
             </div>
             <div class="flex flex-col justify-between items-center p-[0.5em] gap-[0.5em]">
-                <button class="addToWallet text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px] w-[9em]">Add To Wallet</button>
-                <button class="decrease text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px] w-[9em]">Decrease</button>
+                <button
+                    class="addToWallet text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px] w-[9em]">Add To
+                    Wallet</button>
+                <button
+                    class="decrease text-[0.8em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px] w-[9em]">Decrease</button>
             </div>
         </div>
 
-        <div
+        <form id="form"
             class="flex flex-col justify-center items-start gap-[1em] bg-[#fff] text-[#212121] p-[1em] w-[100%] rounded-[10px]">
             <div class="flex flex-wrap justify-between items-center p-[0.5em] w-[100%] gap-[0.5em]">
                 <p class="text-[#212121] w-[100%] text-[2em] text-center bi bi-bag-fill"> Shopping</p>
             </div>
+            <p class="message text-[#e55865] w-[100%] text-center">Not Enough Balance</p>
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em] w-[100%]">
                 <input type="number" placeholder="Enter Amount..."
                     class="newAmount text-[0.8em] bg-[#eee] w-[100%] text-[1.5em] text-[#212121] p-[0.5em_1em] rounded-[5px]" />
@@ -83,19 +89,19 @@
             <div class="flex flex-wrap justify-between items-center p-[0.5em] gap-[0.5em]">
                 <button class="text-[1em] bg-[#2e46b0] text-[#fff] p-[0.5em_1em] rounded-[5px]">Shop</button>
             </div>
-        </div>
+        </form>
 
-    </div>
+        </form>
 
 
-    <!-- sweet alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <!-- javascript -->
-    <script src="./payment/main.js"></script>
+        <!-- sweet alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js "></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js "></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <!-- javascript -->
+        <script src="./payment/main.js"></script>
 </body>
 
 </html>
